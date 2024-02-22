@@ -2,14 +2,26 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-1. Define the `.env`
+How to use this template.
+
+1. Run the `create-next-app`
+
+```
+npx create-next-app@latest -e https://github.com/Jareechang/nextjs-code-template
+```
+
+**Then change into the folder**
+
+2. Create and define the `.env`
+
+Use the `.env.example` as a reference.
 
 ```
 BTY_CODE_API_TOKEN=<token>
 BTY_CODE_API_ENDPOINT=<endpoint>
 ```
 
-2. Run the development server:
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -21,10 +33,12 @@ pnpm dev
 bun dev
 ```
 
-3. Go to http://localhost:3000
+4. Go to http://localhost:3000
 
 ## Defining posts
 
-Posts are kept in `src/entries/*.md`.
+All posts are kept in `src/entries/*.md`.
 
 Each markdown entry are automatically added into the page.
+
+So, if you want a new post, just add it into `src/entries`.
