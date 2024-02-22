@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Head from 'next/head'
+import Script from 'next/script'
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -16,6 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://dev.probablynull.ca/static/index.css" />
+        <Script src="https://dev.probablynull.ca/static/index.js" />
+      </head>
+
       <body className={inter.className}>{children}</body>
     </html>
   );
