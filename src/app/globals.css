@@ -49,7 +49,7 @@ body {
 }
 
 .code-section {
-  --code-snippet-highlight-color: #7bffe921;
+  --code-snippet-highlight-color: #ffffff1f;
   @apply py-8;
 }
 
