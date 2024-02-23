@@ -21,7 +21,13 @@ There are a few benefits with using React Server Components (RSC).
 
 ## An Example {.pt-6}
 
-```tsx
+```css
+.code-section {
+  --code-snippet-highlight-color: #7bffe921;
+}
+```
+
+```tsx highlight:[8-12]
 import { promises as fs } from 'fs';
 
 export default async function Home() {
@@ -32,7 +38,7 @@ export default async function Home() {
         <h1>My Text file</h1>
         <hr />
         <div className="flex justify-content">
-        {textContent}
+          {textContent}
         </div>
      </div>
     </main>
