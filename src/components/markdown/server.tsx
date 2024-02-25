@@ -35,8 +35,8 @@ export default async function MarkdownRenderer({
     <div>
       <div className="my-10">
         <div className="py-2">
-          {metadata?.title && (<h1>{metadata.title}</h1>)}
-          {metadata?.description && (<p>{metadata.description}</p>)}
+          {metadata?.title ? (<h1>{metadata.title}</h1>) : (<h1>Untitled</h1>)}
+          {metadata?.description ? (<p>{metadata.description}</p>) : (<p>No description</p>)}
         </div>
         <hr className="my-4" />
       </div>

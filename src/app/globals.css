@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Use dark mode always */
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  /*--foreground-rgb: 0, 0, 0;*/
+  /*--background-start-rgb: 214, 219, 220;*/
+  /*--background-end-rgb: 255, 255, 255;*/
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,7 +63,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 code.line-single {
   background: var(--code-snippet-highlight-color);
-  @apply font-bold p-1 rounded;
+  @apply font-semibold p-1 px-2 rounded-md;
 }
 
 ol {

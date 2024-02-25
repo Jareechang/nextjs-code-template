@@ -39,7 +39,7 @@ export default async function Page({ params }: PageProps) {
         {/* Initialize the client JS */}
         <BackButton href="/" />
 
-        <MarkdownInit />
+        <MarkdownInit debug />
 
         <MarkdownRenderer slug={slug} />
       </div>

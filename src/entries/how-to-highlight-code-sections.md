@@ -26,6 +26,7 @@ Using the following syntax: `highlight:[{line-start}-{line-end}]`
 
 **Example:** `highlight:[8-12]`
 
+
 ```md
 ~~~ts highlight:[1-3]
 function add(a: number, b: number): number {

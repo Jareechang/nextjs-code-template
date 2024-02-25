@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Head from 'next/head'
 import Script from 'next/script'
 import { Inter } from "next/font/google";
+import { BTY_CODE_API_ENDPOINT } from '@/constants';
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,8 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://dev.probablynull.ca/static/index.css" />
-        <Script src="https://dev.probablynull.ca/static/index.js" />
+        <link rel="stylesheet" href={`${BTY_CODE_API_ENDPOINT}/static/index.css`} />
+        {/*
+        <Script src={`${BTY_CODE_API_ENDPOINT}/static/index.js`} />
+        */}
+        <Script src={`${BTY_CODE_API_ENDPOINT}/static/client.js`} strategy="beforeInteractive" />
       </head>
 
       <body className={inter.className}>{children}</body>

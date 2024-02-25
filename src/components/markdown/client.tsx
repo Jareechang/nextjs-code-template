@@ -11,7 +11,11 @@ export default function MarkdownInit(props: MarkdownClientInitProps) {
     if (props?.debug) {
       console.log('initializing markdown client JS');
     }
-    window?._btyCode?.init();
+    const nodes = document.querySelectorAll('.header-root');
+
+    nodes.forEach((node) => {
+      window?._btyCode?.init(node as HTMLElement);
+    });
   }, []);
 
   return null;

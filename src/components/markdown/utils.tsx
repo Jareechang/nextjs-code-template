@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs';
 import matter from 'gray-matter';
 import { EntryMetaData, MarkdownResponseData } from '@/types';
+import { BTY_CODE_API_TOKEN, BTY_CODE_API_ENDPOINT } from '@/constants';
 
 const rootDir = process.cwd();
 const MARKDOWN_LOCATION = `${rootDir}/src/entries`;
@@ -67,7 +68,7 @@ export const getFile = async(slug: string): Promise<string> => {
   return file?.toString() ?? '';
 }
 
-const API_ENDPOINT: string = process.env.BTY_CODE_API_ENDPOINT ?? '';
+const API_ENDPOINT: string = `${BTY_CODE_API_ENDPOINT}/api/markdown` ?? '';
 
 export const getHtmlFromMarkdownData = async(
   markdownContent: string
@@ -79,14 +80,15 @@ export const getHtmlFromMarkdownData = async(
   const result = await fetch(API_ENDPOINT, {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${process.env.BTY_CODE_API_TOKEN}`,
+      Authorization: `Bearer ${BTY_CODE_API_TOKEN}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       text: markdownContent,
     }),
     cache: 'no-store',
-  })
+  });
+
   const resultJson = await result.json();
   return resultJson;
 }
