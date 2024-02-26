@@ -13,7 +13,7 @@ Welcome to my tutorial.
 
 **Markdown:**
 
-```md
+```md settings:code:minimal
 ~~~shell
 npm install react react-dom
 ~~~
@@ -29,7 +29,7 @@ npm install react react-dom
 
 **Markdown:**
 
-```md
+```md settings:code:minimal
 ~~~shell type:multi:npm,yarn,pnpm,bun
 npm install react react-dom
 ~~~
