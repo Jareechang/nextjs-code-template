@@ -5,30 +5,12 @@
 :root {
   /* Use dark mode always */
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-  /*--foreground-rgb: 0, 0, 0;*/
-  /*--background-start-rgb: 214, 219, 220;*/
-  /*--background-end-rgb: 255, 255, 255;*/
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --global-background: #0E0D0D;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #0E0D0D;
-  /*background: linear-gradient(*/
-      /*to bottom,*/
-      /*transparent,*/
-      /*rgb(var(--background-end-rgb))*/
-    /*)*/
-    /*rgb(var(--background-start-rgb));*/
+  background: var(--global-background);
 }
 
 @layer utilities {
@@ -60,27 +42,6 @@ body {
 
 p, h1, h2, h3, h4, h5, h6 {
   @apply pb-2;
-}
-
-code.line-single {
-  background: var(--code-snippet-highlight-color);
-  @apply font-semibold p-1 px-2 rounded-md;
-}
-
-ol {
-  list-style: numeric;
-  @apply py-4 pl-4;
-}
-
-
-ul {
-  list-style: '•';
-  @apply py-4;
-}
-
-li {
-  @apply pl-2;
-  @apply py-1;
 }
 
 a {

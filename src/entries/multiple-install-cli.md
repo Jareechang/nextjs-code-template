@@ -1,11 +1,11 @@
 ---
 title: Multiple Installations 
-description: npm, yarn and pnpm 
+description: How to add copy button with multiple selections 
 ---
 
 # Summary 
 
-Welcome to my tutorial.
+How to add a copy button with multiple selections.
 
 # Getting started {.pt-6}
 
@@ -13,7 +13,7 @@ Welcome to my tutorial.
 
 **Markdown:**
 
-```md settings:code:minimal
+```md settings:code:minimal settings:code:no-header settings:code:hide-line-numbers
 ~~~shell
 npm install react react-dom
 ~~~
@@ -29,7 +29,7 @@ npm install react react-dom
 
 **Markdown:**
 
-```md settings:code:minimal
+```md settings:code:minimal settings:code:no-header settings:code:hide-line-numbers
 ~~~shell type:multi:npm,yarn,pnpm,bun
 npm install react react-dom
 ~~~

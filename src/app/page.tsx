@@ -7,13 +7,13 @@ const AvailableEntries = async() => {
   return (
     <section className="py-8">
       {entriesWithMetadata.map((data: EntryMetaData) => (
-        <div className="my-8">
+        <div className="my-8" key={data.slug}>
           <h3>{data.title}</h3>
           <p>{data.description}</p>
 
           <div className="pt-4">
             <Link href={`/code/${data.slug}`}>
-              <p>Read More</p>
+              <span>Read More</span>
             </Link>
           </div>
         </div>

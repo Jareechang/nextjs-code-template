@@ -15,7 +15,10 @@ Let’s see an example.
 
 ## Default style {.pt-4}
 
-```tsx highlight:[3-5]
+```tsx
+// [!highlight-range: position=1,description="Import React into the created file.", range=[1]]
+// [!highlight-range: position=2,description="Define the typescript types for the props.", range=[3-5]]
+// [!highlight-range: position=3,description="Define the JSX which returns the components for the App. Here we use fragments to wrap the JSX rather than div", range=[7-20]]
 import React from 'react';
 
 interface AppProps {
@@ -69,7 +72,7 @@ const App: React.FC<AppProps> = ({
 
 Here is an example of a minimal style using `settings:code:minimal settings:code:hide-line-numbers`.
 
-```tsx settings:code:minimal settings:code:hide-line-numbers highlight:[3-5]
+```tsx settings:code:minimal settings:code:hide-line-numbers
 import React from 'react';
 
 interface AppProps {
