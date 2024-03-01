@@ -51,7 +51,7 @@ const [primaryInfo, secondaryInfo] = Promise.all([
 
 ```ts
 // [!recommended-example: description="Recommended: Running async functions in parallel"]
-const [primaryInfo, secondaryInfo] = Promise.all([
+const [primaryInfo, secondaryInfo] = await Promise.all([
   getPrimaryInfo(), getSecondaryInfo(),
 ])
 ```
