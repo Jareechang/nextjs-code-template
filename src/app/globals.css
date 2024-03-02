@@ -37,7 +37,11 @@ body {
 
 .code-section {
   --code-snippet-highlight-color: #ffffff1f;
-  @apply py-8;
+}
+
+.code-section.has-footer {
+  --code-snippet-highlight-color: #ffffff1f;
+  padding-bottom: 0;
 }
 
 p, h1, h2, h3, h4, h5, h6 {

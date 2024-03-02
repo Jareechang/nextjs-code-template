@@ -36,10 +36,10 @@ export default async function Page({ params }: PageProps) {
   return (
     <div className="md:container md:max-w-[1000px] mx-auto py-10">
       <div className="min-h-screen p-10">
-        {/* Initialize the client JS */}
         <BackButton href="/" />
 
-        <MarkdownInit debug />
+        {/* Initialize the client JS */}
+        <MarkdownInit />
 
         <MarkdownRenderer slug={slug} />
       </div>

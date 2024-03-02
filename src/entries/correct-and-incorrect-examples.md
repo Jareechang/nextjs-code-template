@@ -41,7 +41,7 @@ await getSecondaryInfo();
 ```md settings:code:minimal settings:code:hide-line-numbers
 ~~~ts
 // [!recommended-example: description="Recommended: Running async functions in parallel"]
-const [primaryInfo, secondaryInfo] = Promise.all([
+const [primaryInfo, secondaryInfo] = await Promise.all([
   getPrimaryInfo(), getSecondaryInfo(),
 ])
 ~~~

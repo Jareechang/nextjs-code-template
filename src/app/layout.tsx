@@ -20,11 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href={`${BTY_CODE_API_ENDPOINT}/static/index.css`} />
+        <link rel="stylesheet" href={`${BTY_CODE_API_ENDPOINT}/static/index.css`}  crossOrigin="anonymous" />
         {/*
         <Script src={`${BTY_CODE_API_ENDPOINT}/static/index.js`} />
         */}
-        <Script src={`${BTY_CODE_API_ENDPOINT}/static/client.js`} strategy="beforeInteractive" />
+        <Script src={`${BTY_CODE_API_ENDPOINT}/static/client.js`} strategy="beforeInteractive" crossOrigin="anonymous" />
       </head>
 
       <body className={inter.className}>{children}</body>
