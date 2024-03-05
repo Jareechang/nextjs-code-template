@@ -3,6 +3,7 @@ export declare global {
     _btyCode: {
       init: (node: HTMLElement) => void;
       renderFooter: (node: HTMLElement) => void;
+      apiEndpoint: string;
     }
   }
 }
