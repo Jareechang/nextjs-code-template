@@ -41,8 +41,8 @@ const myThing = (thingId: string) => {
 
 ## Example: Recommended {.pt-4}
 
-```ts settings:code:hide-clipboard settings:code:creator-mode
-// [!recommended-example: description="Recommended: Separate enhancement andyour business logic"]
+```ts settings:code:hide-clipboard settings:code:creator-mode highlight:[2-3]
+// [!recommended-example: description="Recommended: Separate enhancement and your business logic"]
 const myThing = cache((thingId: string) => {
   const data = getData(thingId);
   return data;

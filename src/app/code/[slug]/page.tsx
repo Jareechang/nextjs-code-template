@@ -35,7 +35,7 @@ export default async function Page({ params }: PageProps) {
   const slug: string = params?.slug ?? '';
   return (
     <div id="code-page-container" className="md:container md:max-w-[1000px] mx-auto py-10">
-      <div className="min-h-screen p-10 inline-block">
+      <div className="min-h-screen p-10">
         <BackButton href="/" />
 
         {/* Initialize the client JS */}

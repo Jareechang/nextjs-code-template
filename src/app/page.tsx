@@ -26,7 +26,7 @@ export default async function Home() {
   const data = await getAllEntriesWithMetadata();
   return (
     <main className="md:container md:max-w-[1000px] mx-auto py-10">
-      <div className="min-h-screen p-10 inline-block">
+      <div className="min-h-screen p-10">
         <h1>Check out my posts</h1>
         <hr />
         <div className="flex justify-content">
