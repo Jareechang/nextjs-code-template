@@ -1,6 +1,9 @@
 ---
 title: Introduction to React Server Components (RSC)
 description: Short guide on RSC 
+date: "2023-04-30T22:57:26.723Z"
+tags: Next.js, React.js 
+draft: false
 ---
 
 # Summary 
@@ -11,7 +14,7 @@ Here is a short guide on React Server Components.
 
 There are a few benefits with using React Server Components (RSC).
 
-- Async functions within React.js 
+- Async functions within React.js [Next.js](https://nextjs.org/docs)
 
 - Tree shaking (Less client-side JS)
 

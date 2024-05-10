@@ -21,9 +21,21 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="stylesheet" href={`${BTY_CODE_API_ENDPOINT}/static/index.css`}  crossOrigin="anonymous" />
+        <link rel="stylesheet" href={`${BTY_CODE_API_ENDPOINT}/style/fonts?type=radon`}  crossOrigin="anonymous" />
         {/*
+        <link rel="stylesheet" href={`${BTY_CODE_API_ENDPOINT}/style/fonts?type=radon`}  crossOrigin="anonymous" />
         <Script src={`${BTY_CODE_API_ENDPOINT}/static/index.js`} />
         */}
+        {/*
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
+        */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" crossOrigin="anonymous" />
+
         <Script src={`${BTY_CODE_API_ENDPOINT}/static/client.js`} strategy="beforeInteractive" crossOrigin="anonymous" />
       </head>
 

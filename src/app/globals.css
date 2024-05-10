@@ -51,3 +51,23 @@ p, h1, h2, h3, h4, h5, h6 {
 a {
   @apply text-blue-400 font-bold;
 }
+
+/*@font-face {*/
+  /*font-family: 'Monospace-RadonRegular';*/
+  /*src: url('/fonts/MonaspaceRadon-Regular.woff') format('woff');*/
+  /*font-weight: normal;*/
+/*}*/
+
+/*.code-section {*/
+  /*transform: scale(1.5);*/
+/*}*/
+
+/*.code-section .line > * {*/
+  /*font-family: 'Monospace-RadonRegular', Inter, sans-serif;*/
+/*}*/
+
+/*.code-section .line > * {*/
+  /*font-family: "JetBrains Mono", monospace;*/
+  /*font-optical-sizing: auto;*/
+  /*font-style: normal;*/
+/*}*/

@@ -33,21 +33,27 @@ const getFileMetadata = async(file: string) => {
   };
 }
 
+// Not Draft
+const isPublishedEntry = (entry: EntryMetaData): boolean => !Boolean(entry.draft);
+
 export const getAllEntriesWithMetadata = async(): Promise<EntryMetaData[]> => {
   let fileWithMetadata: EntryMetaData[] = [];
   try {
     const files = await fs.readdir(getMarkdownEntryLocation());
     const markdownFilesOnly = files.filter(file => file.match(/^\w.*\.md/));
+
     const fileContents = await Promise.all(markdownFilesOnly.map(getFileMetadata));
 
     fileWithMetadata = fileContents.map(({ file, content }) => {
-      const { title, description } = matter(content)?.data;
+      const { title, description, date, tags, draft = false } = matter(content)?.data;
       return {
         slug: file.replace(/.md/g, ''),
         title,
+        date,
         description,
+        draft,
       } as EntryMetaData;
-    });
+    }).filter(isPublishedEntry);
 
   } catch (err) {
     console.error('getAllEntriesWithMetadata: ', err);
@@ -91,4 +97,9 @@ export const getHtmlFromMarkdownData = async(
 
   const resultJson = await result.json();
   return resultJson;
+}
+
+export const formatDate = (dateString: string) : string => {
+  if (!dateString) return dateString;
+  return (new Date(dateString)).toDateString();
 }
