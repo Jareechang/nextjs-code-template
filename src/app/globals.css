@@ -6,6 +6,15 @@
   /* Use dark mode always */
   --foreground-rgb: 255, 255, 255;
   --global-background: #0E0D0D;
+
+  /* Blockquote */
+  /* style 1 */
+  /*--blockquote-background-color: #ecebff;*/
+  /*--blockquote-border-color: rgb(163 161 237);*/
+
+  /* style 2 */
+  --blockquote-background-color: rgb(217 245 253);
+  --blockquote-border-color: rgb(112 218 246);
 }
 
 body {
@@ -51,6 +60,19 @@ p, h1, h2, h3, h4, h5, h6 {
 a {
   @apply text-blue-400 font-bold;
 }
+
+blockquote.common {
+  @apply my-6;
+  background: var(--blockquote-background-color);
+  padding: 1rem 2rem;
+  color: #000;
+  border-left: 6px solid var(--blockquote-border-color);
+
+  .__z-para {
+    @apply p-0;
+  }
+}
+
 
 /*@font-face {*/
   /*font-family: 'Monospace-RadonRegular';*/

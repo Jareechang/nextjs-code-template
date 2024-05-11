@@ -20,7 +20,7 @@ const BackButton = ({ href }: { href: string; }) => (
 export default async function Page({ params }: PageProps) {
   const slug: string = params?.slug ?? '';
   return (
-    <div id="code-page-container" className="md:container md:max-w-[1000px] mx-auto py-10">
+    <div id="code-page-container" className="md:container md:max-w-[900px] mx-auto py-10">
       <div className="min-h-screen p-10">
         <BackButton href="/" />
 
